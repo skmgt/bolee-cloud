@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>bolee-cloud</artifactId>
+    <groupId>com.itheima.bolee</groupId>
+    <version>2.0-SNAPSHOT</version>
+  </parent>
+  <!--基础骨架模块-->
+  <artifactId>bolee-framework</artifactId>
+  <name>bolee-framework</name>
+  <packaging>pom</packaging>
+  <modules>
+    <!--基础模块-工具包-->
+    <module>framework-commons</module>
+    <!--基础模块-freemaker支持-->
+    <module>framework-freemaker</module>
+    <!--基础模块-knife4j-gateway支持-->
+    <module>framework-knife4j-gateway</module>
+    <!--基础模块-knife4j-web支持-->
+    <module>framework-knife4j-web</module>
+    <!--基础模块-mybatis-plus支持-->
+    <module>framework-mybatis-plus</module>
+    <!--基础模块-redis支持-->
+    <module>framework-redis</module>
+    <!--基础模块-seata支持-->
+    <module>framework-seata</module>
+    <!--基础模块-sharding-sphere支持-->
+    <module>framework-sharding-sphere</module>
+    <!--基础模块-task-executor支持-->
+    <module>framework-task-executor</module>
+    <!--基础模块-xxl-job支持-->
+    <module>framework-xxl-job</module>
+    <!--基础模块-web支持-->
+    <module>framework-web</module>
+    <!--基础模块-gateway支持-->
+    <module>framework-gateway</module>
+    <!--基础模块-feign支持-->
+    <module>framework-feign</module>
+    <!--基础模块-rabbitmq支持-->
+    <module>framework-rabbitmq</module>
+    <!--基础模块-urule-base规则引擎支持-->
+    <module>framework-rule-base</module>
+    <!-- 时序数据库模块 -->
+    <module>framework-influxdb</module>
+    <!-- ai模块 -->
+    <module>framework-wenxin</module>
+    <!--基础模块外部属于源模块-->
+    <module>framework-out-interface</module>
+  </modules>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+</project>

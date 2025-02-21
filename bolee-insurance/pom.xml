@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <!--保险:后台管理web-->
+    <module>insurance-mgt</module>
+    <!--保险:统一service-->
+    <module>insurance-service</module>
+    <!--保险:小程序管理web-->
+    <module>insurance-app</module>
+    <module>insurance-interface</module>
+  </modules>
+  <parent>
+    <artifactId>bolee-cloud</artifactId>
+    <groupId>com.itheima.bolee</groupId>
+    <version>2.0-SNAPSHOT</version>
+  </parent>
+  <!--保险业务模块-->
+  <artifactId>bolee-insurance</artifactId>
+  <name>bolee-insurance</name>
+  <packaging>pom</packaging>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+</project>

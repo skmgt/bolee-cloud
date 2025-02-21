@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.itheima.bolee</groupId>
+    <artifactId>bolee-insurance</artifactId>
+    <version>2.0-SNAPSHOT</version>
+  </parent>
+  <!--保险:统一service-->
+  <artifactId>insurance-service</artifactId>
+  <name>insurance-service</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>framework-mybatis-plus</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>file-interface</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>framework-redis</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>framework-rabbitmq</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>framework-seata</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.itheima.bolee</groupId>
+        <artifactId>security-interface</artifactId>
+    </dependency>
+    <!-- 规则引擎客户端 -->
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>rule-client</artifactId>
+    </dependency>
+    <!-- 交易模块 -->
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>trade-interface</artifactId>
+    </dependency>
+    <!-- 外部数据源 -->
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>framework-out-interface</artifactId>
+    </dependency>
+    <!-- 数据字典 -->
+    <dependency>
+        <groupId>com.itheima.bolee</groupId>
+        <artifactId>dict-interface</artifactId>
+    </dependency>
+    <!-- ai模块 -->
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>framework-ai</artifactId>
+    </dependency>
+    <!--三方sdk接口封装-->
+    <dependency>
+      <groupId>com.itheima.bolee</groupId>
+      <artifactId>bolee-apache-httpclient</artifactId>
+    </dependency>
+    <!-- 数据脱敏组件 -->
+<!--    <dependency>-->
+<!--      <groupId>com.itheima.bolee</groupId>-->
+<!--      <artifactId>framework-data-desensitize</artifactId>-->
+<!--    </dependency>-->
+  </dependencies>
+</project>

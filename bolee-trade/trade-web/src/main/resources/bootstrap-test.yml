@@ -1,0 +1,57 @@
+#服务配置
+server:
+  #端口
+  port: 7077
+  #服务编码
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  config:
+    activate:
+      on-profile:
+        - test
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  #应用配置
+  application:
+    #应用名称
+    name: trade-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_ADDRESS:nacos-service.yjy-public-sfbx-java.svc.cluster.local:20015} # nacos注册中心
+        group: SEATA_GROUP
+        service: ${spring.application.name}
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:PKsf*bxQ4;yP3a+}
+      config:
+        server-addr: ${NACOS_ADDRESS:nacos-service.yjy-public-sfbx-java.svc.cluster.local:20015} # nacos注册中心
+        group: SEATA_GROUP
+        file-extension: yml
+        shared-configs: # 共享配置
+          - data-id: shared-spring-seata.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-spring-task.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-redisson.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-mybatis-plus.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-stream-rabbit-basic.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-stream-rabbit-source-trade.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+        username: ${NACOS_USERNAME:nacos}
+        password: ${NACOS_PASSWORD:PKsf*bxQ4;yP3a+}
+logging:
+  config: classpath:logback.xml

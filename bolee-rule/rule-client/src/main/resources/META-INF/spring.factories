@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+   com.itheima.bolee.framework.rule.config.SpringApplicationAware,\
+   com.itheima.bolee.framework.rule.config.URuleServletRegistration,\
+   com.itheima.bolee.framework.rule.template.RuleTemplate

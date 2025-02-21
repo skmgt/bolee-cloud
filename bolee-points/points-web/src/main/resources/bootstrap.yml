@@ -1,0 +1,51 @@
+#服务配置
+server:
+  #端口
+  port: 7080
+  #服务编码
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  influx:
+    url: http://192.168.200.129:8086
+    password: 123456
+    user: admin
+    mapper-location: com.itheima.bolee.points.mapper
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  #应用配置
+  application:
+    #应用名称
+    name: points-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.200.129:8848 # nacos注册中心
+        group: SEATA_GROUP
+        service: ${spring.application.name}
+      config:
+        server-addr: 192.168.200.129:8848 # nacos配置中心地址
+        group: SEATA_GROUP
+        file-extension: yml
+        shared-configs: # 共享配置
+          - data-id: shared-spring-seata.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-spring-task.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-redisson.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+          - data-id: shared-mybatis-plus.yml #配置文件名-DataId
+            group: SEATA_GROUP
+            refresh: false
+logging:
+  config: classpath:logback.xml
+
